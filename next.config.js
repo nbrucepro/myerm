@@ -9,8 +9,20 @@
 
 // next.config.js
 
-module.exports = {
-  images: {
-    disableStaticImages: true
-  }
-}
+// module.exports = {
+//   images: {
+//     disableStaticImages: true
+//   }
+// }
+const withImages = require('next-images');
+
+module.exports = withImages({
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: 'file-loader',
+    });
+
+    return config;
+  },
+});
