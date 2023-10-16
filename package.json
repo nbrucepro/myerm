@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "node --openssl-legacy-provider ./node_modules/.bin/next dev",
+    "dev": "next dev",
     "build": "next build",
     "serve": "next start",
     "export": "next export",
@@ -14,7 +14,7 @@
     "framer-motion": "^2.7.5",
     "globby": "^11.0.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "9.5.3",
+    "next": "12.2.3",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.4",
     "prettier": "^2.1.2",
