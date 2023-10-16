@@ -14,7 +14,8 @@ export default function Header({ className }) {
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header" style={{background:"white !important",padding:"5px",boxShadow: '2px 1px 2px rgba(0, 0, 0, 0.26)'}}>
         <Container sx={styles.container}>
-          <Logo src={Logosnippet} />
+          <Logo src={LogoDark} />
+          {/* <Logo src={Logosnippet} /> */}
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (

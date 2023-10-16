@@ -3,7 +3,8 @@ import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
 import { Link } from 'components/link';
 import data from './footer.data';
 import FooterLogo from '../../../public/assets/logo.svg';
-import Logosnippet from '../../../public/assets/logosnippet.png';
+// import Logosnippet from '../../../public/assets/logo.svg';
+// import Logosnippet from '../../../public/assets/l'
 
 export default function Footer() {
   return (
@@ -26,9 +27,9 @@ export default function Footer() {
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
           <Link path="/">
-            {/* <Image src={FooterLogo} alt="Logo" /> */}
+            <Image src={FooterLogo} alt="Logo" />
             {/* <div style={{width:"60px",height:"50px"}}> */}
-              <Image style={{width:"60px",height:"50px"}} src={Logosnippet} alt="startup landing logo" />
+              {/* <Image style={{width:"60px",height:"50px"}} src={Logosnippet} alt="startup landing logo" /> */}
             {/* </div> */}
           </Link>
           <Box sx={styles.footer.menus}>
