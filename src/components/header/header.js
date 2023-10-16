@@ -2,6 +2,7 @@
 import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
+import Logosnippet from '../../../public/assets/logosnippet.png';
 import Logo from 'components/logo';
 import LogoDark from '../../../public/assets/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
@@ -11,9 +12,9 @@ import menuItems from './header.data';
 export default function Header({ className }) {
   return (
     <DrawerProvider>
-      <header sx={styles.header} className={className} id="header">
+      <header sx={styles.header} className={className} id="header" style={{background:"white !important",padding:"5px",boxShadow: '2px 1px 2px rgba(0, 0, 0, 0.26)'}}>
         <Container sx={styles.container}>
-          <Logo src={LogoDark} />
+          <Logo src={Logosnippet} />
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
@@ -63,12 +64,12 @@ const styles = {
   header: {
     color: 'text',
     fontWeight: 'body',
-    py: 4,
+    py: 5,
     width: '100%',
     position: 'absolute',
-    top: 0,
+    top: 2,
     left: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: 'red',
     transition: 'all 0.4s ease',
     animation: `${positionAnim} 0.4s ease`,
     '.donate__btn': {
@@ -78,9 +79,9 @@ const styles = {
     },
     '&.sticky': {
       position: 'fixed',
-      backgroundColor: 'background',
+      backgroundColor: 'gray',
       color: '#000000',
-      boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
+      boxShadow: '2px 1px 2px rgba(0, 0, 0, 0.26)',
       py: 3,
       'nev > a': {
         color: 'text',

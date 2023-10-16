@@ -85,9 +85,9 @@ export default function Subscribe() {
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>
-                <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
+                {/* <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
                   Email Address
-                </label>
+                </label> */}
                 <Input
                   ref={inputEl}
                   id="email"

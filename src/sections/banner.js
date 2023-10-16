@@ -15,9 +15,10 @@ export default function Banner() {
             Top Quality Digital Products To Explore
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Get your blood tests delivered at let home collect sample from the
+            {/* Get your blood tests delivered at let home collect sample from the
             victory of the managements that supplies best design system
-            guidelines ever.
+            guidelines ever. */}
+            Effectively oversee the operations of your business by harnessing the power of professional accounting features. This means employing robust financial management tools and practices to ensure that your business's financial matters are handled competently and in a manner that maximizes efficiency and accuracy
           </Text>
           <Button variant="primary">Explore</Button>
         </Box>

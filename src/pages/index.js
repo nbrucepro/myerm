@@ -23,14 +23,14 @@ export default function IndexPage() {
         <Layout>
           <SEO title="myerm" />
           <Banner />
-          <KeyFeature />
+          {/* <KeyFeature /> */}
           <ServiceSection />
-          <Feature />
-          <CoreFeature />
+          {/* <Feature /> */}
+          {/* <CoreFeature /> */}
           <WorkFlow />
           <Package />
-          <TeamSection />
-          <TestimonialCard />
+          {/* <TeamSection /> */}
+          {/* <TestimonialCard /> */}
           <BlogSection />
           <Subscribe />
         </Layout>
