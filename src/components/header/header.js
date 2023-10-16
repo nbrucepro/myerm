@@ -2,7 +2,7 @@
 import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
-import Logosnippet from '../../../public/assets/logosnippet.png';
+// import Logosnippet from '../../../public/assets/logosnippet.png';
 import Logo from 'components/logo';
 import LogoDark from '../../../public/assets/logo.svg';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
