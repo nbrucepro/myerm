@@ -3,9 +3,9 @@ import { jsx } from 'theme-ui';
 import { Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 
-import PatternBG from 'assets/patternBG.png';
-import ArrowOdd from 'assets/arrowOdd.svg';
-import ArrowEven from 'assets/arrowEven.svg';
+import PatternBG from '../../public/assets/patternBG.png';
+import ArrowOdd from '../../public/assets/arrowOdd.svg';
+import ArrowEven from '../../public/assets/arrowEven.svg';
 
 const data = [
   {

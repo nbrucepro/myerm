@@ -5,9 +5,9 @@ import SectionHeader from 'components/section-header';
 import PostCard from 'components/post-card.js';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
-import PostThumb1 from 'assets/blog/1.jpg';
-import PostThumb2 from 'assets/blog/2.jpg';
-import PostThumb3 from 'assets/blog/3.jpg';
+import PostThumb1 from '../../public/assets/blog/1.jpg';
+import PostThumb2 from '../../public/assets/blog/2.jpg';
+import PostThumb3 from '../../public/assets/blog/3.jpg';
 
 const data = [
   {

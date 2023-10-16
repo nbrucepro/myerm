@@ -2,7 +2,7 @@
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
 import { Link } from 'components/link';
 import data from './footer.data';
-import FooterLogo from 'assets/logo.svg';
+import FooterLogo from '../../../public/assets/logo.svg';
 export default function Footer() {
   return (
     <footer sx={styles.footer}>

@@ -1,28 +1,76 @@
-// const withPlugins = require('next-compose-plugins');
-// const optimizedImages = require('next-optimized-images');
+const webpack = require("webpack");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const withImages = require("next-images");
+const withPlugins = require("next-compose-plugins");
 
-// const nextConfiguration = {
-//   target: 'serverless', //will output independent pages that don't require a monolithic server. It's only compatible with next start or Serverless deployment platforms (like ZEIT Now) — you cannot use the custom server API.
-// };
-
-// module.exports = withPlugins([optimizedImages], nextConfiguration);
-
-// next.config.js
-
-// module.exports = {
-//   images: {
-//     disableStaticImages: true
-//   }
-// }
-const withImages = require('next-images');
-
-module.exports = withImages({
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: 'file-loader',
-    });
+const config = {
+  devIndicators: {
+    buildActivity: false,
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
 
     return config;
   },
-});
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin({}),
+      new UglifyJsPlugin({
+        cache: true,
+        sourceMap: true,
+        parallel: true,
+      }),
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("production"),
+      },
+    }),
+    new webpack.optimize.AggressiveMergingPlugin(),
+  ],
+};
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//   enabled: true,
+//   openAnalyzer: false,
+// });
+
+// module.exports = withPlugins(
+//   [
+//     [withBundleAnalyzer],
+//     [
+//       withImages,
+//       {
+//         cssLoaderOptions: {
+//           url: false,
+//         },
+//         esModule: true,
+//         productionBrowserSourceMaps: false,
+//       },
+//     ],
+//   ],
+//   config
+// );
+module.exports = withPlugins(
+  [
+    [
+      withImages,
+      {
+        images: {
+          // domains: ["d39ubr28bcomsg.cloudfront.net"], // Add your image domain(s) here
+          disableStaticImages: true,
+        },
+        cssLoaderOptions: {
+          url: false,
+        },
+        esModule: true,
+        productionBrowserSourceMaps: false,
+      },
+    ],
+  ],
+  config
+);

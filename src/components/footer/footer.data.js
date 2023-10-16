@@ -1,6 +1,6 @@
-import Chat from 'assets/widget/chat.svg';
-import Community from 'assets/widget/community.svg';
-import Github from 'assets/widget/github.svg';
+import Chat from '../../../public/assets/widget/chat.svg';
+import Community from '../../../public/assets/widget/community.svg';
+import Github from '../../../public/assets/widget/github.svg';
 
 export default {
   widgets: [
